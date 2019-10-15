@@ -1,6 +1,5 @@
 # PicoCTF 2019
 
-
 ## Gerneral Skill
 
 ### mus1c
@@ -23,6 +22,8 @@
 
 得到ascii code 再轉換一下就是flag
 
+---
+
 ## Forensic
 
 ### WhitePages
@@ -33,7 +34,7 @@ E2 80 83 代換成 0
 
 20 代換成 1
 
-![WhitePages](WhitePages.png)
+![WhitePages.png](./pictures/WhitePages.png)
 
 ---
 
@@ -117,7 +118,7 @@ scramble(str1_addr, str1_length, str2_addr, str2_length)
 
 已知flag前八個字元為"picoCTF{"，最後一個為"}"
 
-![droids1](droids1.png)
+![droids1.png](./pictures/droids1.png)
 
 嗯? input 那麼剛好最後一個字等於第二個字?
 
@@ -242,19 +243,19 @@ scramble(str1_addr, str1_length, str2_addr, str2_length)
     flag = []
 
     for i in range(32):
-    flag.append("#")
+        flag.append("#")
 
     for i in range(8):
-    flag[i] = s[i]
+        flag[i] = s[i]
 
     for i in range(8,16):
-    flag[23-i] = s[i]
+        flag[23-i] = s[i]
 
     for i in range(16,32,2):
-    flag[46-i] = s[i]
+        flag[46-i] = s[i]
 
     for i in range(17,33,2):
-    flag[i] = s[i]
+        flag[i] = s[i]
 
     print("picoCTF{%s}" % "".join(flag))
 
@@ -275,7 +276,7 @@ scramble(str1_addr, str1_length, str2_addr, str2_length)
 
 base64解碼後再URL解碼
 
-![VaultDoor5](VaultDoor5.png)
+![VaultDoor5.png](./pictures/VaultDoor5.png)
 
 ### Vault Door 6
 
